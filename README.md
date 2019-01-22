@@ -1,3 +1,7 @@
 # bigdataSpark
-<img src="https://github.com/peengtao123/bigdataSpark/blob/master/data/a7067.jpg"/>
-<img src="data/a7067.jpg"/>
+<table>
+    <tr>
+        <td><img src="data/a7067.jpg"/></td>
+        <td><img src="data/a7067.jpg"/></td>
+    </tr>
+</table>
