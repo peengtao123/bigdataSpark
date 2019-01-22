@@ -17,10 +17,12 @@ public class SparkFour {
         views.createOrReplaceTempView("views");
 
         ///每周浏览量
-//        spark.sql("select _c1,weekofyear(_c2),count(*) from views where _c1='1692' group by _c1,weekofyear(_c2) order by weekofyear(_c2)").show();
+        spark.sql("select _c1,weekofyear(_c2),count(*) from views where _c1='1692' group by _c1,weekofyear(_c2) order by weekofyear(_c2)").show();
         ///每天浏览量
-//        spark.sql("select _c1,substring(_c2,0,10),count(*) from views where _c1='1692' group by _c1,substring(_c2,0,10) order by substring(_c2,0,10)").show();
+        spark.sql("select _c1,substring(_c2,0,10),count(*) from views where _c1='1692' group by _c1,substring(_c2,0,10) order by substring(_c2,0,10)").show();
         ///每月浏览量
         spark.sql("select _c1,month(_c2),count(*) from views where _c1='1692' group by _c1,month(_c2) order by month(_c2) asc").show();
+
+        spark.stop();
     }
 }

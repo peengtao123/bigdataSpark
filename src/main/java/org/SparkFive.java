@@ -21,7 +21,9 @@ public class SparkFive {
         shops.createOrReplaceTempView("shops");
         views.createOrReplaceTempView("views");
 
-//        spark.sql("select *from shops").show();
+
         spark.sql("select b._c0,b._c1,b._c3,count(*) from views a,shops b where b._c0=a._c1 group by b._c0,b._c1,b._c3 order by count(*) desc limit(50)").show();
+
+        spark.stop();
     }
 }

@@ -21,9 +21,13 @@ public class SparkTwo {
         pays.createOrReplaceTempView("pays");
         views.createOrReplaceTempView("views");
 
+
+
         //奶茶前五
-//        spark.sql("select * from shops a,pays b where a._c0=b._c1 and a._c1 in('北京','上海','广州','深圳') and a._c9='奶茶' order by 0.7*(a._c4/5)+0.3*a._c3").show();
+        spark.sql("select * from shops a,pays b where a._c0=b._c1 and a._c1 in('北京','上海','广州','深圳') and a._c9='奶茶' order by 0.7*(a._c4/5)+0.3*a._c3").show();
         //中式快餐前五
         spark.sql("select * from shops a,pays b where a._c0=b._c1 and a._c1 in('北京','上海','广州','深圳') and a._c9='中式快餐' order by 0.7*(a._c4/5)+0.3*a._c3").show();
+
+        spark.stop();
     }
 }

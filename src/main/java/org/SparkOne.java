@@ -31,5 +31,7 @@ public class SparkOne {
         ///平均日交易额前三商家 ,count(*)*b._c3/datediff(max(a._c2),min(a._c2))
         Dataset<Row> sqlDF = spark.sql("SELECT a._c1,count(*)*b._c3/datediff(max(a._c2),min(a._c2)) as avgPay FROM pays a,shops b where a._c1=b._c0 group by a._c1,b._c3 order by avgPay desc ");
         sqlDF.show();
+
+        spark.stop();
     }
 }
