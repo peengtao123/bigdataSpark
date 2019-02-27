@@ -9,11 +9,11 @@ public class SparkFour {
         SparkSession spark = SparkSession
                 .builder()
                 .appName("Java Spark SQL basic example")
-                .master("local")
+//                .master("local")
                 .config("spark.some.config.option", "some-value")
                 .getOrCreate();
 
-        Dataset<Row> views = spark.read().csv("D:\\data\\user_view.txt");
+        Dataset<Row> views = spark.read().csv("D:\\data\\user_view.csv");
         views.createOrReplaceTempView("views");
 
         ///每周浏览量
