@@ -10,5 +10,8 @@
         <module name="demo" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bigdataSpark" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
